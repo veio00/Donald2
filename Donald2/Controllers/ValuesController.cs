@@ -30,17 +30,37 @@ namespace Donald2.Controllers
         [SwaggerResponse(HttpStatusCode.OK)]
         [SwaggerResponse(HttpStatusCode.NotFound)]
         [HttpGet]
-        public string GetFoi(string coleta)
+        public bool GetFoi(string coleta)
         {
-            Uso u = new Uso();
+            Leitura l = new Leitura();
             //string ru = coleta;
             //u = JsonConvert.DeserializeObject<Uso>(coleta);
             //u= (Uso)JsonConvert.DeserializeObject(coleta);
             //string r = JsonConvert.SerializeObject(u.Hd);
             JavaScriptSerializer serializer1 = new JavaScriptSerializer();
-            u = serializer1.Deserialize<Uso>(coleta);
-            return u.IdUso.ToString() ;
+            l = serializer1.Deserialize<Leitura>(coleta);
+            if (l != null)
+            {
+                return true;
+            }
+            else{
+                return false;
+            }
+            
 
+        }
+        [HttpGet]
+        public bool KeepAlive(bool ok)
+        {
+            if(ok == true)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+            
         }
 
 

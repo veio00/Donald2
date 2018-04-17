@@ -9,21 +9,21 @@ using Newtonsoft.Json.Converters;
 
 namespace Donald2.Models
 {
-    public partial class Uso
+    public partial class Leitura
     {
         [JsonProperty("idUso", Required = Required.Always)]
-        public long IdUso { get; set; }
+        public int IdUso { get; set; }
 
         [JsonProperty("Hd", Required = Required.Always)]
-        public long Hd { get; set; }
+        public int Hd { get; set; }
 
         [JsonProperty("Mram", Required = Required.Always)]
-        public long Mram { get; set; }
+        public int Mram { get; set; }
 
         [JsonProperty("Cpu", Required = Required.Always)]
-        public long Cpu { get; set; }
+        public int Cpu { get; set; }
 
         [JsonProperty("Maquina_Uso", Required = Required.Always)]
-        public long MaquinaUso { get; set; }
+        public int MaquinaUso { get; set; }
     }
 }
