@@ -24,6 +24,9 @@ namespace Donald2.Models
         [JsonProperty("Adiquirida", Required = Required.Always)]
         public string Adiquirida { get; set; }
 
+        [JsonProperty("Sistema", Required = Required.Always)]
+        public string Sistema { get; set; }
+
         [JsonProperty("Keep_Alive", Required = Required.Always)]
         public int KeepAlive { get; set; }
 

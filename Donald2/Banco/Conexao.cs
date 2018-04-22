@@ -65,7 +65,7 @@ namespace Donald2.Banco
                 {
                     using (SqlCommand sqlComando = new SqlCommand(strQuery, sqlConexao))
                     {
-                        sqlComando.CommandType = System.Data.CommandType.StoredProcedure;
+                        sqlComando.CommandType = System.Data.CommandType.Text;
 
                         if (lstParametros != null)
                         {

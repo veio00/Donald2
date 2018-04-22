@@ -13,10 +13,14 @@ using System.Web.Script.Serialization;
 using System.Web.UI.WebControls;
 using Newtonsoft.Json;
 using System.Web.Http.Description;
+using Donald2.Banco;
+using System.Data;
+using System.Web.Http.Cors;
 
 namespace Donald2.Controllers
 {
-    public class ValuesController : ApiController 
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
+    public class ColetaController : ApiController 
     {
         // GET api/values
         [SwaggerOperation("GetAll")]
@@ -26,19 +30,9 @@ namespace Donald2.Controllers
             return new string[] { "GetFoi: http://localhost:3182/api/Values/GetFoi", "value2" };
         }
 
-        [SwaggerOperation("Agora")]
-        [SwaggerResponse(HttpStatusCode.OK)]
-        [SwaggerResponse(HttpStatusCode.NotFound)]
-        [HttpGet]
-        public bool GetFoi(string coleta)
+        [HttpPost]
+        public bool RecebeLeitura([FromBody]Leitura l)
         {
-            Leitura l = new Leitura();
-            //string ru = coleta;
-            //u = JsonConvert.DeserializeObject<Uso>(coleta);
-            //u= (Uso)JsonConvert.DeserializeObject(coleta);
-            //string r = JsonConvert.SerializeObject(u.Hd);
-            JavaScriptSerializer serializer1 = new JavaScriptSerializer();
-            l = serializer1.Deserialize<Leitura>(coleta);
             if (l != null)
             {
                 return true;
@@ -49,8 +43,8 @@ namespace Donald2.Controllers
             
 
         }
-        [HttpGet]
-        public bool KeepAlive(bool ok)
+        [HttpPost]
+        public bool KeepAlive([FromBody]bool ok)
         {
             if(ok == true)
             {
@@ -62,6 +56,7 @@ namespace Donald2.Controllers
             }
             
         }
+
 
 
     }
