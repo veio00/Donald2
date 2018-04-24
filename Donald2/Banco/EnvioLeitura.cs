@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Donald2.Models;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -37,5 +38,7 @@ namespace Donald2.Banco
             }
 
         }
+
+
     }
 }

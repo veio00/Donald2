@@ -56,10 +56,32 @@ namespace Donald2.Controllers
             }
             
         }
-
-        public void InfoMaquina()
+        [HttpPost]
+        public int InfoMaquina([FromBody]Maquina maq)
         {
-            throw new System.NotImplementedException();
+            BancoMaquina bm = new BancoMaquina();
+            return bm.Salva_Maquina(maq);
+        }
+
+        [HttpPost]
+        public bool InfoProcessador([FromBody]Processador maq,int id)
+        {
+            BancoMaquina bm = new BancoMaquina();
+            return bm.Salva_Processador(maq,id);
+        }
+
+        [HttpPost]
+        public bool InfoMemoria([FromBody]Memoria maq, int id)
+        {
+            BancoMaquina bm = new BancoMaquina();
+            return bm.Salva_Memoria(maq, id);
+        }
+
+        [HttpPost]
+        public bool InfoDisco([FromBody]Disco maq, int id)
+        {
+            BancoMaquina bm = new BancoMaquina();
+            return bm.Salva_Disco(maq, id);
         }
     }
 }

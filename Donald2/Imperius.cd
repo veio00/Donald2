@@ -8,7 +8,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Donald2.Controllers.ViewController">
-    <Position X="6.25" Y="0.5" Width="1.75" />
+    <Position X="6.75" Y="0.5" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAIAAAAAAABAAABAAAAAAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
       <FileName>Controllers\ViewController.cs</FileName>
@@ -17,7 +17,7 @@
   <Class Name="Donald2.Controllers.ColetaController">
     <Position X="8.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAAAAgAAAAAQAAAAEAAA=</HashCode>
+      <HashCode>AAAAAAAAAgAAAABAABACAAAAAAAAgAAAAAQAAAAEAAA=</HashCode>
       <FileName>Controllers\ColetaController.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -29,9 +29,9 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Donald2.Banco.BancoMaquina">
-    <Position X="4.5" Y="2.75" Width="2" />
+    <Position X="4.5" Y="0.5" Width="2" />
     <TypeIdentifier>
-      <HashCode>CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAE=</HashCode>
+      <HashCode>CAAAAAAAAAAAAAAAAAAAAAAQAAQAAAAgAABIAAAAAAE=</HashCode>
       <FileName>Banco\BancoMaquina.cs</FileName>
     </TypeIdentifier>
   </Class>
