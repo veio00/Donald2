@@ -7,15 +7,15 @@ using System.Web;
 
 namespace Donald2.Banco
 {
-    public class EnvioLeitura
+    public class BancoLeitura
     {
         private Conexao ObjBanco;
 
-        public EnvioLeitura()
+        public BancoLeitura()
         {
             ObjBanco = new Conexao();
         }
-        ~EnvioLeitura()
+        ~BancoLeitura()
         {
             ObjBanco = null;
         }

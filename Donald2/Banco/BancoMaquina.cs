@@ -37,5 +37,22 @@ namespace Donald2.Banco
             }
 
         }
+
+        public DataTable Carregar_Maquina_Esp(int maquina)
+        {
+            try
+            {
+
+                List<SqlParameter> LstParametros = new List<SqlParameter>();
+
+                DataTable dt = ObjBanco.ExecuteQuery("select * from Maquina where idMaquina =" + maquina + " ", LstParametros);
+
+                return dt;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
     }
 }

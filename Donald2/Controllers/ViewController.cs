@@ -19,9 +19,9 @@ namespace Donald2.Controllers
         }
 
         [HttpPost]
-        public DataTable getLeitura()
+        public DataTable CarregaLeitura()
         {
-            EnvioLeitura CarregaLeitura = new EnvioLeitura();
+            BancoLeitura CarregaLeitura = new BancoLeitura();
             DataTable lista = new DataTable();
             lista = CarregaLeitura.Carregar_Leitura();
             return lista;
@@ -42,6 +42,14 @@ namespace Donald2.Controllers
             BancoMaquina CarregaMaquinas = new BancoMaquina();
             DataTable lista = new DataTable();
             lista = CarregaMaquinas.Carregar_Maquina(grupo);
+            return lista;
+        }
+
+        public DataTable CarregaMaquinaEsp(int maquina)
+        {
+            BancoMaquina CarregaMaquinas = new BancoMaquina();
+            DataTable lista = new DataTable();
+            lista = CarregaMaquinas.Carregar_Maquina(maquina);
             return lista;
         }
     }

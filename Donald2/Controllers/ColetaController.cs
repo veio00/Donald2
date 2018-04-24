@@ -31,7 +31,7 @@ namespace Donald2.Controllers
         }
 
         [HttpPost]
-        public bool RecebeLeitura([FromBody]Leitura l)
+        public bool LeituraAgora([FromBody]Leitura l)
         {
             if (l != null)
             {
@@ -57,7 +57,9 @@ namespace Donald2.Controllers
             
         }
 
-
-
+        public void InfoMaquina()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
