@@ -63,7 +63,7 @@ namespace Donald2.Banco
 
                 List<SqlParameter> LstParametros = new List<SqlParameter>();
 
-                DataTable resposta = ObjBanco.ExecuteQuery("insert into Maquina values(" + m.Responsavel + "," + m.NomeMaquina + ",getdate()" + "," + m.Sistema + "," + m.KeepAlive + "," + m.GrupoCliente + ")", LstParametros);
+                DataTable resposta = ObjBanco.ExecuteQuery("insert into Maquina values('" + m.Responsavel + "','" + m.Nome_Maquina + "',getdate()" + ",'" + m.Sistema + "'," + m.KeepAlive + "," + m.Grupo_Cliente + ")", LstParametros);
                 DataTable dt = ObjBanco.ExecuteQuery("select max(idMAquina) from Maquina", LstParametros);
                 if (dt != null)
                 {
@@ -88,7 +88,7 @@ namespace Donald2.Banco
             {
                 List<SqlParameter> LstParametros = new List<SqlParameter>();
 
-                DataTable dt = ObjBanco.ExecuteQuery("insert into Processador("+p.Modelo+","+id+")", LstParametros);
+                DataTable dt = ObjBanco.ExecuteQuery("insert into Processador('"+p.Modelo+"',"+id+")", LstParametros);
 
                 if (dt != null)
                 {
@@ -111,7 +111,7 @@ namespace Donald2.Banco
             {
                 List<SqlParameter> LstParametros = new List<SqlParameter>();
 
-                DataTable dt = ObjBanco.ExecuteQuery("insert into Memoria(Qtd,Geracao,Maquina_Memoria) values ("+me.Qtd+","+me.Geracao+","+id+")", LstParametros);
+                DataTable dt = ObjBanco.ExecuteQuery("insert into Memoria(Qtd,Geracao,Maquina_Memoria) values ("+me.Qtd+",'"+me.Geracao+"',"+id+")", LstParametros);
 
                 if (dt != null)
                 {
@@ -135,7 +135,7 @@ namespace Donald2.Banco
             {
                 List<SqlParameter> LstParametros = new List<SqlParameter>();
 
-                DataTable dt = ObjBanco.ExecuteQuery("insert into Disco(Espaço,Marca,N_Discos,Maquina_Disco) values ("+ d.Espaco+","+d.Marca+","+d.NDisco+","+d.MaquinaDisco+")", LstParametros);
+                DataTable dt = ObjBanco.ExecuteQuery("insert into Disco(Espaço,Marca,N_Discos,Maquina_Disco) values ("+ d.Espaco+",'"+d.Marca+"',"+d.NDisco+","+d.MaquinaDisco+")", LstParametros);
 
                 if (dt != null)
                 {
